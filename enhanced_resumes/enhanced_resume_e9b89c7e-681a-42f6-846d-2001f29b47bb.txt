@@ -1,0 +1,51 @@
+**R NISHANTH**
++91 6302092732 • Hyderabad, India • nishanth0962333@gmail.com
+linkedin.com/in/r-nishanth-/ • github.com/Nishanth-nishu • nishanth-nishu.github.io
+
+**SUMMARY**
+Highly motivated and results-oriented recent Computer Science graduate with a strong foundation in data science, machine learning, and software development.  Proven ability to design, develop, and deploy AI-driven solutions, optimizing models for enhanced efficiency and measurable business impact.  Seeking an entry-level position to leverage analytical and problem-solving skills in a challenging and rewarding environment.
+
+**EDUCATION**
+**Bachelor of Technology (B.Tech), Computer Science and Engineering** | KG Reddy College of Engineering and Technology, Hyderabad | 2021 – 2025 | CGPA: 3.04/4
+* Relevant Activities: Member of AI&ML Club, Member of KASE Innovation Cell
+
+**TECHNICAL SKILLS**
+**Programming Languages:** Python (Pandas, NumPy, Scikit-learn), C, C++, Java
+**Machine Learning:** TensorFlow, PyTorch, Keras, Scikit-learn, MLOps, Hugging Face,  EfficientNet, FAISS
+**Databases:** MySQL, SQLite3
+**Data Visualization:** Matplotlib, Seaborn, Power BI
+**Web Technologies:** HTML, CSS, Flask, Django, REST APIs
+**Other:** Git, GitHub, Docker,  Data Analytics, Web Scraping,  Agile Methodologies
+
+**PROJECTS**
+**Japanese to English Translator using MBART:**
+* Developed a Flask-based NLP application achieving a 92 BLEU score for accurate Japanese-English translations.
+* Optimized inference speed by 35% using quantization and multi-threading.
+* GitHub: github.com/Nishanth-nishu/japtoeng
+
+**AI-Driven Glycemic Risk Prediction System:**
+* Built a machine learning model with 88% accuracy to predict diabetes risk from patient health records.
+* Implemented a personalized recommendation system (simulated Gemini AI functionality) increasing patient engagement by 50%.
+* GitHub: github.com/Nishanth-nishu/diabetic-prevention-
+
+**License Plate Detection and Recognition:**
+* Developed an OCR-based license plate detection model with 95% accuracy.
+* Deployed as a real-time web application, reducing manual verification time by 80%.
+* GitHub: github.com/Nishanth-nishu/licence-plate-detection
+* Live Demo: huggingface.co/spaces/Nishur/licensed
+
+**EXPERIENCE**
+**Oracle APEX Application Trainee** | ProwessIQ Information Systems Pvt Ltd | Chennai, India | Feb 2025
+* Engineered an image-based recommendation system using EfficientNet and FAISS, improving search accuracy by 40%.
+* Integrated AI-driven recommendations into Oracle APEX, enhancing database performance by 30%.
+* Optimized enterprise AI solutions, reducing processing latency from 5 seconds to 2 seconds per image fetching.
+
+**AWARDS AND RECOGNITION**
+* State-Level Technical Fest - Runner-Up
+* IEEE National-Level Project Expo - Participant
+* Python Data Science Training & Hackathon (30+ hours)
+* Full-Stack Python Internship - Swecha Telangana (Django web application development, database optimization resulting in a 50% reduction in API response time)
+
+**LEADERSHIP AND EXTRA-CURRICULAR ACTIVITIES**
+* Admin of Telegram Community (70+ members): Curated AI research papers, improving member engagement by 60%.
+* Head of AIML Club (Treasurer): Organized 5+ workshops with 100+ attendees, increasing club participation by 40%.

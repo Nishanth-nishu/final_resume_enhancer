@@ -1,0 +1,40 @@
+**R NISHANTH**
++91 6302092732 • Hyderabad, India • nishanth0962333@gmail.com
+linkedin.com/in/r-nishanth-/ • github.com/Nishanth-nishu • nishanth-nishu.github.io
+
+**SUMMARY**
+Highly motivated and results-oriented recent Computer Science graduate with a strong foundation in data science, machine learning, and software development. Proven ability to design, develop, and deploy AI-driven solutions, optimize models for enhanced efficiency, and deliver measurable business impact.  Seeking an entry-level accounting internship to leverage analytical and problem-solving skills in a practical setting and contribute to a dynamic team.
+
+**EDUCATION**
+**Bachelor of Technology (B.Tech), Computer Science and Engineering**
+KG Reddy College of Engineering and Technology, Hyderabad | 2021 – 2025 | CGPA: 3.04/4
+* Relevant Activities: Member of AI&ML Club, Member of KASE Innovation Cell
+
+**TECHNICAL SKILLS**
+**Programming Languages:** Python (Pandas, NumPy, Scikit-learn), C, C++
+**Frameworks/Libraries:** TensorFlow, PyTorch, Keras, Flask, Scikit-learn, Hugging Face Transformers, FAISS, EfficientNet
+**Databases:** MySQL, SQLite3
+**Data Visualization:** Matplotlib, Seaborn, Power BI
+**Tools & Technologies:** Git, GitHub, MLOps, Docker (optional, add if used), AWS/Azure/GCP (optional, add if used)
+**Other Skills:** Web scraping, Data analytics, Machine learning model development and deployment,  SQL, Data cleaning and preprocessing
+
+**PROJECTS**
+**AI-Driven Glycemic Risk Prediction System:** Developed a machine learning model (88% accuracy) to predict diabetes risk using patient health records. Implemented a recommendation system (Gemini AI) to improve patient engagement by 50%.  Utilized [mention specific algorithms/techniques].  [GitHub link]
+**Japanese to English Translator:** Built a Flask-based NLP application using MBART achieving a 92 BLEU score. Optimized inference speed by 35% using quantization and multi-threading. [GitHub link]
+**License Plate Detection and Recognition:** Created an OCR-based model with 95% accuracy, deployed as a real-time web application reducing manual verification time by 80%. [GitHub link, Hugging Face link]
+
+**EXPERIENCE**
+**Oracle APEX Application Trainee | ProwessIQ Information Systems Pvt Ltd | Chennai, India | Feb 2025**
+* Engineered an image-based recommendation system using EfficientNet and FAISS, improving search accuracy by 40%.
+* Integrated AI-driven recommendations into Oracle APEX, enhancing database performance by 30%.
+* Optimized enterprise AI solutions, reducing processing latency from 5s to 2s per image fetching.
+
+**AWARDS AND RECOGNITION**
+* State-Level Technical Fest - Runner-Up
+* IEEE National-Level Project Expo - Participant
+* Python Data Science Training & Hackathon (Completed 30+ hours of training)
+* Full-Stack Python Internship - Swecha Telangana (Built and deployed a Django-based web application for data visualization)
+
+**LEADERSHIP AND EXTRA-CURRICULAR ACTIVITIES**
+* Admin of Telegram Community (70+ members): Curated AI research papers, improving member engagement by 60%.
+* Head of AIML Club (Treasurer): Organized 5+ workshops with 100+ attendees, increasing club participation by 40%.
