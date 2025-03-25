@@ -17,32 +17,7 @@ A web application that enhances resumes using Google's Gemini AI by tailoring th
 - Match Scoring: Calculates how well your resume matches the job description
 - Interactive Chat: Modify your resume through conversational AI
 - File Support: Processes PDF, DOCX, TXT, and RTF formats
-
-## Project Structure
-
-```
-Final_resume_enhancer/
-├── app.py                # Main Flask application
-├── setup.py              # Installation script
-├── requirements.txt      # Python dependencies
-├── test.py               # Test cases
-├── README.md             # This file
-├── .env                  # Environment variables
-├── app.log               # Application logs
-│
-├── static/               # Static files
-│   ├── css/
-│   │   └── styles.css    # Custom styles
-│   └── js/
-│       └── main.js       # Frontend JavaScript
-│
-├── templates/            # HTML templates
-│   └── index.html        # Main frontend interface
-│
-├── uploads/              # User-uploaded resumes
-├── enhanced_resumes/     # Processed resume outputs
-└── fonts/                # Custom fonts for PDF generation
-```
+``
 
 ## Installation
 
