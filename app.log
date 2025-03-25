@@ -139,3 +139,408 @@
 2025-03-23 13:34:08,974 - INFO - PDF generated: enhanced_resumes\enhanced_resume_4bec4544-e454-4e00-b8d2-25f452782989.pdf
 2025-03-23 13:34:09,524 - INFO - 127.0.0.1 - - [23/Mar/2025 13:34:09] "POST /api/enhance-resume HTTP/1.1" 200 -
 2025-03-23 13:34:38,618 - INFO - 127.0.0.1 - - [23/Mar/2025 13:34:38] "GET /download-resume/enhanced_resume_4bec4544-e454-4e00-b8d2-25f452782989.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 14:19:51,983 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 14:19:52,453 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:19:52,454 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 14:19:52,669 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:19:52,669 - INFO - Downloading font: Roboto-Regular
+2025-03-23 14:19:53,140 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 14:19:53,141 - INFO - Downloading font: Roboto-Bold
+2025-03-23 14:19:53,592 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 14:19:53,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 14:19:53,619 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 14:19:53,781 - INFO - 127.0.0.1 - - [23/Mar/2025 14:19:53] "GET / HTTP/1.1" 200 -
+2025-03-23 14:19:54,373 - INFO - 127.0.0.1 - - [23/Mar/2025 14:19:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 14:19:54,425 - INFO - 127.0.0.1 - - [23/Mar/2025 14:19:54] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 14:20:08,019 - INFO - 127.0.0.1 - - [23/Mar/2025 14:20:08] "GET / HTTP/1.1" 200 -
+2025-03-23 14:20:08,084 - INFO - 127.0.0.1 - - [23/Mar/2025 14:20:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 14:20:08,099 - INFO - 127.0.0.1 - - [23/Mar/2025 14:20:08] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 14:21:50,218 - INFO - Enhance resume request received
+2025-03-23 14:21:50,336 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 14:21:50,548 - INFO - File saved to: uploads\022deccf-bbb6-42a8-bc99-492981fdefaf.pdf
+2025-03-23 14:21:50,558 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 14:21:50,935 - INFO - Resume text extracted successfully
+2025-03-23 14:22:00,193 - INFO - Resume enhanced successfully
+2025-03-23 14:22:00,438 - INFO - PDF generated: enhanced_resumes\enhanced_resume_022deccf-bbb6-42a8-bc99-492981fdefaf.pdf
+2025-03-23 14:22:01,099 - INFO - 127.0.0.1 - - [23/Mar/2025 14:22:01] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 14:22:33,312 - INFO - 127.0.0.1 - - [23/Mar/2025 14:22:33] "GET /download-resume/enhanced_resume_022deccf-bbb6-42a8-bc99-492981fdefaf.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 14:38:39,394 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 14:38:39,893 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:38:39,893 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 14:38:40,058 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:38:40,059 - INFO - Downloading font: Roboto-Regular
+2025-03-23 14:38:40,495 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 14:38:40,496 - INFO - Downloading font: Roboto-Bold
+2025-03-23 14:38:40,983 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 14:38:41,002 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 14:38:41,003 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 14:38:46,577 - INFO - 127.0.0.1 - - [23/Mar/2025 14:38:46] "GET / HTTP/1.1" 200 -
+2025-03-23 14:38:46,849 - INFO - 127.0.0.1 - - [23/Mar/2025 14:38:46] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 14:38:46,853 - INFO - 127.0.0.1 - - [23/Mar/2025 14:38:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 14:39:12,006 - INFO - Enhance resume request received
+2025-03-23 14:39:12,025 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 14:39:12,027 - INFO - File saved to: uploads\975f0bce-d574-492d-8c84-dd3858050960.pdf
+2025-03-23 14:39:12,031 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 14:39:12,840 - INFO - Resume text extracted successfully
+2025-03-23 14:39:20,109 - INFO - Resume enhanced successfully
+2025-03-23 14:39:20,122 - INFO - PDF generated: enhanced_resumes\enhanced_resume_975f0bce-d574-492d-8c84-dd3858050960.pdf
+2025-03-23 14:39:20,755 - INFO - 127.0.0.1 - - [23/Mar/2025 14:39:20] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 14:39:51,183 - INFO - 127.0.0.1 - - [23/Mar/2025 14:39:51] "GET /download-resume/enhanced_resume_975f0bce-d574-492d-8c84-dd3858050960.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 14:48:11,713 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 14:48:12,177 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:48:12,178 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 14:48:12,328 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 14:48:12,330 - INFO - Downloading font: Roboto-Regular
+2025-03-23 14:48:12,755 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 14:48:12,756 - INFO - Downloading font: Roboto-Bold
+2025-03-23 14:48:13,186 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 14:48:13,207 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 14:48:13,208 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 14:48:18,033 - INFO - 127.0.0.1 - - [23/Mar/2025 14:48:18] "GET / HTTP/1.1" 200 -
+2025-03-23 14:48:18,199 - INFO - 127.0.0.1 - - [23/Mar/2025 14:48:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 14:48:18,202 - INFO - 127.0.0.1 - - [23/Mar/2025 14:48:18] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 14:48:41,508 - INFO - Enhance resume request received
+2025-03-23 14:48:41,511 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 14:48:41,512 - INFO - File saved to: uploads\1605b2bd-4b71-47d3-b8b6-484e34a92fa4.pdf
+2025-03-23 14:48:41,514 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 14:48:41,813 - INFO - Resume text extracted successfully
+2025-03-23 14:48:48,814 - INFO - Resume enhanced successfully
+2025-03-23 14:48:48,820 - INFO - PDF generated: enhanced_resumes\enhanced_resume_1605b2bd-4b71-47d3-b8b6-484e34a92fa4.pdf
+2025-03-23 14:48:49,797 - INFO - 127.0.0.1 - - [23/Mar/2025 14:48:49] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 15:05:56,799 - INFO - 127.0.0.1 - - [23/Mar/2025 15:05:56] "GET / HTTP/1.1" 200 -
+2025-03-23 15:05:57,013 - INFO - 127.0.0.1 - - [23/Mar/2025 15:05:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 15:05:59,202 - INFO - 127.0.0.1 - - [23/Mar/2025 15:05:59] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 15:07:02,752 - INFO - Enhance resume request received
+2025-03-23 15:07:02,756 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 15:07:02,769 - INFO - File saved to: uploads\983f7143-d630-4833-81f4-30cce094458f.pdf
+2025-03-23 15:07:02,770 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 15:07:02,949 - INFO - Resume text extracted successfully
+2025-03-23 15:07:10,305 - INFO - Resume enhanced successfully
+2025-03-23 15:07:10,314 - INFO - PDF generated: enhanced_resumes\enhanced_resume_983f7143-d630-4833-81f4-30cce094458f.pdf
+2025-03-23 15:07:10,918 - INFO - 127.0.0.1 - - [23/Mar/2025 15:07:10] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 15:07:18,998 - INFO - 127.0.0.1 - - [23/Mar/2025 15:07:18] "GET /download-resume/enhanced_resume_983f7143-d630-4833-81f4-30cce094458f.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 16:16:21,174 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 16:16:21,730 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 16:16:21,731 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 16:16:21,963 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 16:16:21,964 - INFO - Downloading font: Roboto-Regular
+2025-03-23 16:16:22,484 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 16:16:22,485 - INFO - Downloading font: Roboto-Bold
+2025-03-23 16:16:23,138 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 16:16:23,187 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 16:16:23,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 16:16:27,462 - INFO - 127.0.0.1 - - [23/Mar/2025 16:16:27] "GET / HTTP/1.1" 200 -
+2025-03-23 16:16:27,654 - INFO - 127.0.0.1 - - [23/Mar/2025 16:16:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 16:16:27,695 - INFO - 127.0.0.1 - - [23/Mar/2025 16:16:27] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 16:17:31,349 - INFO - Enhance resume request received
+2025-03-23 16:17:31,452 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth.pdf
+2025-03-23 16:17:31,476 - INFO - File saved to: uploads\99217d91-b977-4018-aaec-523d19d7d5c7.pdf
+2025-03-23 16:17:31,478 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 16:17:32,432 - INFO - Resume text extracted successfully
+2025-03-23 16:17:39,760 - INFO - Resume enhanced successfully
+2025-03-23 16:17:39,779 - INFO - PDF generated: enhanced_resumes\enhanced_resume_99217d91-b977-4018-aaec-523d19d7d5c7.pdf
+2025-03-23 16:17:40,596 - INFO - 127.0.0.1 - - [23/Mar/2025 16:17:40] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 16:18:15,020 - INFO - 127.0.0.1 - - [23/Mar/2025 16:18:15] "GET /download-resume/enhanced_resume_99217d91-b977-4018-aaec-523d19d7d5c7.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 16:18:27,343 - INFO - 127.0.0.1 - - [23/Mar/2025 16:18:27] "GET /download-resume/enhanced_resume_99217d91-b977-4018-aaec-523d19d7d5c7.txt?type=txt HTTP/1.1" 200 -
+2025-03-23 17:55:24,293 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 17:55:24,807 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 17:55:24,808 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 17:55:25,000 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 17:55:25,002 - INFO - Downloading font: Roboto-Regular
+2025-03-23 17:55:25,548 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 17:55:25,549 - INFO - Downloading font: Roboto-Bold
+2025-03-23 17:55:26,087 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 17:55:26,161 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 17:55:26,164 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 17:55:29,939 - INFO - 127.0.0.1 - - [23/Mar/2025 17:55:29] "GET / HTTP/1.1" 200 -
+2025-03-23 17:55:30,096 - INFO - 127.0.0.1 - - [23/Mar/2025 17:55:30] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 17:55:30,098 - INFO - 127.0.0.1 - - [23/Mar/2025 17:55:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 17:57:00,900 - INFO - Enhance resume request received
+2025-03-23 17:57:00,999 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 17:57:01,876 - INFO - File saved to: uploads\70aa6b79-b9e7-4675-81dd-f01e078a9482.pdf
+2025-03-23 17:57:01,974 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 17:57:02,479 - INFO - Resume text extracted successfully
+2025-03-23 17:57:10,753 - INFO - Resume enhanced successfully
+2025-03-23 17:57:11,230 - ERROR - Error generating modern PDF: 'ModernPDF' object has no attribute 'get_font'
+2025-03-23 17:57:11,318 - ERROR - Error generating PDF: 'ModernPDF' object has no attribute 'get_font'
+2025-03-23 17:57:11,372 - ERROR - Error generating PDF: 'ModernPDF' object has no attribute 'get_font'
+2025-03-23 17:57:11,400 - INFO - 127.0.0.1 - - [23/Mar/2025 17:57:11] "[35m[1mPOST /api/enhance-resume HTTP/1.1[0m" 500 -
+2025-03-23 17:57:18,814 - INFO - Enhance resume request received
+2025-03-23 17:57:19,265 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 17:57:19,280 - INFO - File saved to: uploads\be1f301e-fc84-40c4-a5c5-228230c0d41a.pdf
+2025-03-23 17:57:19,319 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 17:57:19,638 - INFO - Resume text extracted successfully
+2025-03-23 17:57:27,152 - INFO - Resume enhanced successfully
+2025-03-23 17:57:28,224 - INFO - PDF generated: enhanced_resumes\enhanced_resume_be1f301e-fc84-40c4-a5c5-228230c0d41a.pdf
+2025-03-23 17:57:29,227 - INFO - 127.0.0.1 - - [23/Mar/2025 17:57:29] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 17:58:01,700 - INFO - 127.0.0.1 - - [23/Mar/2025 17:58:01] "GET /download-resume/enhanced_resume_be1f301e-fc84-40c4-a5c5-228230c0d41a.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 20:22:54,831 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 20:22:55,296 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 20:22:55,297 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 20:22:55,443 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 20:22:55,444 - INFO - Downloading font: Roboto-Regular
+2025-03-23 20:22:55,864 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 20:22:55,864 - INFO - Downloading font: Roboto-Bold
+2025-03-23 20:22:56,360 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 20:22:56,438 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 20:22:56,439 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 20:23:00,651 - INFO - 127.0.0.1 - - [23/Mar/2025 20:23:00] "GET / HTTP/1.1" 200 -
+2025-03-23 20:23:00,673 - INFO - 127.0.0.1 - - [23/Mar/2025 20:23:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 20:23:00,786 - INFO - 127.0.0.1 - - [23/Mar/2025 20:23:00] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 20:23:27,123 - INFO - Enhance resume request received
+2025-03-23 20:23:27,130 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 20:23:27,141 - INFO - File saved to: uploads\29e9fc46-9c81-4d22-ba6b-d716d1671a3b.pdf
+2025-03-23 20:23:27,163 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 20:23:27,569 - INFO - Resume text extracted successfully
+2025-03-23 20:23:37,678 - INFO - Resume enhanced successfully
+2025-03-23 20:23:37,687 - INFO - PDF generated: enhanced_resumes\enhanced_resume_29e9fc46-9c81-4d22-ba6b-d716d1671a3b.pdf
+2025-03-23 20:23:38,357 - INFO - 127.0.0.1 - - [23/Mar/2025 20:23:38] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 20:24:28,120 - INFO - 127.0.0.1 - - [23/Mar/2025 20:24:28] "GET /download-resume/enhanced_resume_29e9fc46-9c81-4d22-ba6b-d716d1671a3b.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 21:28:18,966 - INFO - Downloading font: OpenSans-Regular
+2025-03-23 21:28:19,410 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 21:28:19,411 - INFO - Downloading font: OpenSans-Bold
+2025-03-23 21:28:19,553 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-23 21:28:19,554 - INFO - Downloading font: Roboto-Regular
+2025-03-23 21:28:19,998 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-23 21:28:19,999 - INFO - Downloading font: Roboto-Bold
+2025-03-23 21:28:20,460 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-23 21:28:20,493 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-23 21:28:20,494 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-23 21:28:25,170 - INFO - 127.0.0.1 - - [23/Mar/2025 21:28:25] "GET / HTTP/1.1" 200 -
+2025-03-23 21:28:25,300 - INFO - 127.0.0.1 - - [23/Mar/2025 21:28:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-23 21:28:25,303 - INFO - 127.0.0.1 - - [23/Mar/2025 21:28:25] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-23 21:29:26,082 - INFO - Enhance resume request received
+2025-03-23 21:29:26,087 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 21:29:26,091 - INFO - File saved to: uploads\dfffb176-a21f-4be1-88d5-393293a366f3.pdf
+2025-03-23 21:29:26,552 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 21:29:27,524 - INFO - Resume text extracted successfully
+2025-03-23 21:29:34,975 - INFO - Resume enhanced successfully
+2025-03-23 21:29:34,986 - INFO - PDF generated: enhanced_resumes\enhanced_resume_dfffb176-a21f-4be1-88d5-393293a366f3.pdf
+2025-03-23 21:29:35,918 - INFO - 127.0.0.1 - - [23/Mar/2025 21:29:35] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 21:29:54,098 - INFO - 127.0.0.1 - - [23/Mar/2025 21:29:54] "GET /download-resume/enhanced_resume_dfffb176-a21f-4be1-88d5-393293a366f3.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-23 21:57:56,135 - INFO - Enhance resume request received
+2025-03-23 21:57:56,146 - INFO - Resume file: R_Nishanth_resume_2025_03_1741759181227_R Nishanth (1).pdf
+2025-03-23 21:57:56,239 - INFO - File saved to: uploads\0baee414-932e-43f9-8d34-25a3cd3ede45.pdf
+2025-03-23 21:57:56,285 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-23 21:57:56,912 - INFO - Resume text extracted successfully
+2025-03-23 21:58:05,675 - INFO - Resume enhanced successfully
+2025-03-23 21:58:05,767 - INFO - PDF generated: enhanced_resumes\enhanced_resume_0baee414-932e-43f9-8d34-25a3cd3ede45.pdf
+2025-03-23 21:58:06,624 - INFO - 127.0.0.1 - - [23/Mar/2025 21:58:06] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-23 21:58:16,820 - INFO - 127.0.0.1 - - [23/Mar/2025 21:58:16] "GET /download-resume/enhanced_resume_0baee414-932e-43f9-8d34-25a3cd3ede45.txt?type=txt HTTP/1.1" 200 -
+2025-03-23 21:58:24,752 - INFO - 127.0.0.1 - - [23/Mar/2025 21:58:24] "GET /download-resume/enhanced_resume_0baee414-932e-43f9-8d34-25a3cd3ede45.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-24 00:11:04,319 - INFO - Enhance resume request received
+2025-03-24 00:11:04,389 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 00:11:04,407 - INFO - File saved to: uploads\48b982f1-2f97-4dbb-ae0c-5de97d01aaf4.pdf
+2025-03-24 00:11:04,419 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 00:11:07,031 - INFO - Resume text extracted successfully
+2025-03-24 00:11:13,721 - INFO - Resume enhanced successfully
+2025-03-24 00:11:13,732 - INFO - PDF generated: enhanced_resumes\enhanced_resume_48b982f1-2f97-4dbb-ae0c-5de97d01aaf4.pdf
+2025-03-24 00:11:14,404 - INFO - 127.0.0.1 - - [24/Mar/2025 00:11:14] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 00:11:58,144 - INFO - 127.0.0.1 - - [24/Mar/2025 00:11:58] "GET /download-resume/enhanced_resume_48b982f1-2f97-4dbb-ae0c-5de97d01aaf4.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-24 00:12:24,245 - INFO - 127.0.0.1 - - [24/Mar/2025 00:12:24] "[36mGET /download-resume/enhanced_resume_48b982f1-2f97-4dbb-ae0c-5de97d01aaf4.pdf?type=pdf HTTP/1.1[0m" 304 -
+2025-03-24 00:12:49,034 - INFO - Enhance resume request received
+2025-03-24 00:12:49,038 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 00:12:49,041 - INFO - File saved to: uploads\de0ac1ac-9070-4813-b4b0-e3ee61cd1fc8.pdf
+2025-03-24 00:12:49,043 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 00:12:51,583 - INFO - Resume text extracted successfully
+2025-03-24 00:12:56,558 - INFO - Resume enhanced successfully
+2025-03-24 00:12:56,587 - INFO - PDF generated: enhanced_resumes\enhanced_resume_de0ac1ac-9070-4813-b4b0-e3ee61cd1fc8.pdf
+2025-03-24 00:12:57,419 - INFO - 127.0.0.1 - - [24/Mar/2025 00:12:57] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 00:13:24,785 - INFO - 127.0.0.1 - - [24/Mar/2025 00:13:24] "GET /download-resume/enhanced_resume_de0ac1ac-9070-4813-b4b0-e3ee61cd1fc8.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-24 00:18:06,755 - INFO - Downloading font: OpenSans-Regular
+2025-03-24 00:18:07,394 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 00:18:07,396 - INFO - Downloading font: OpenSans-Bold
+2025-03-24 00:18:07,580 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 00:18:07,581 - INFO - Downloading font: Roboto-Regular
+2025-03-24 00:18:08,049 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-24 00:18:08,050 - INFO - Downloading font: Roboto-Bold
+2025-03-24 00:18:08,511 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-24 00:18:08,630 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-24 00:18:08,632 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 00:18:19,279 - INFO - 127.0.0.1 - - [24/Mar/2025 00:18:19] "GET / HTTP/1.1" 200 -
+2025-03-24 00:18:19,306 - INFO - 127.0.0.1 - - [24/Mar/2025 00:18:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-24 00:18:19,593 - INFO - 127.0.0.1 - - [24/Mar/2025 00:18:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-24 00:18:42,717 - INFO - Enhance resume request received
+2025-03-24 00:18:42,966 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 00:18:43,046 - INFO - File saved to: uploads\f1606e83-52f0-4dd1-bd3f-457738070f23.pdf
+2025-03-24 00:18:43,049 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 00:18:45,795 - INFO - Resume text extracted successfully
+2025-03-24 00:18:51,367 - INFO - Resume enhanced successfully
+2025-03-24 00:18:51,507 - INFO - PDF generated: enhanced_resumes\enhanced_resume_f1606e83-52f0-4dd1-bd3f-457738070f23.pdf
+2025-03-24 00:18:52,536 - INFO - 127.0.0.1 - - [24/Mar/2025 00:18:52] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 00:19:15,728 - INFO - 127.0.0.1 - - [24/Mar/2025 00:19:15] "GET /download-resume/enhanced_resume_f1606e83-52f0-4dd1-bd3f-457738070f23.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-24 01:14:31,255 - INFO - Downloading font: OpenSans-Regular
+2025-03-24 01:14:31,773 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 01:14:31,777 - INFO - Downloading font: OpenSans-Bold
+2025-03-24 01:14:31,952 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 01:14:31,953 - INFO - Downloading font: Roboto-Regular
+2025-03-24 01:14:32,606 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-24 01:14:32,609 - INFO - Downloading font: Roboto-Bold
+2025-03-24 01:14:33,078 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-24 01:14:33,106 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-24 01:14:33,107 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 01:14:42,843 - INFO - 127.0.0.1 - - [24/Mar/2025 01:14:42] "GET / HTTP/1.1" 200 -
+2025-03-24 01:14:43,208 - INFO - 127.0.0.1 - - [24/Mar/2025 01:14:43] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-24 01:14:43,243 - INFO - 127.0.0.1 - - [24/Mar/2025 01:14:43] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-24 01:15:05,214 - INFO - Enhance resume request received
+2025-03-24 01:15:05,922 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 01:15:05,941 - INFO - File saved to: uploads\5d936907-b2f0-4905-9589-df714d73b1fc.pdf
+2025-03-24 01:15:06,013 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 01:15:07,942 - INFO - Resume text extracted successfully
+2025-03-24 01:15:14,839 - INFO - Resume enhanced successfully
+2025-03-24 01:15:14,869 - INFO - PDF generated: enhanced_resumes\enhanced_resume_5d936907-b2f0-4905-9589-df714d73b1fc.pdf
+2025-03-24 01:15:16,708 - INFO - 127.0.0.1 - - [24/Mar/2025 01:15:16] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 01:15:35,887 - INFO - 127.0.0.1 - - [24/Mar/2025 01:15:35] "GET /download-resume/enhanced_resume_5d936907-b2f0-4905-9589-df714d73b1fc.pdf?type=pdf HTTP/1.1" 200 -
+2025-03-24 01:18:20,302 - INFO - Chat with resume request received
+2025-03-24 01:18:25,347 - INFO - Chat processed successfully
+2025-03-24 01:18:25,359 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_1fe555af-c953-420f-9fef-7da5314b7838.pdf
+2025-03-24 01:18:26,094 - INFO - 127.0.0.1 - - [24/Mar/2025 01:18:26] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 01:20:46,133 - INFO - Chat with resume request received
+2025-03-24 01:20:52,128 - INFO - Chat processed successfully
+2025-03-24 01:20:52,168 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_57576e1f-bbea-41e8-a47a-7e40e2ad4c75.pdf
+2025-03-24 01:20:52,742 - INFO - 127.0.0.1 - - [24/Mar/2025 01:20:52] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 01:22:02,275 - INFO - Chat with resume request received
+2025-03-24 01:22:07,907 - INFO - Chat processed successfully
+2025-03-24 01:22:07,913 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_e00e70f1-65a0-4297-b1c6-82822d79630f.pdf
+2025-03-24 01:22:08,447 - INFO - 127.0.0.1 - - [24/Mar/2025 01:22:08] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 01:23:09,867 - INFO - 127.0.0.1 - - [24/Mar/2025 01:23:09] "[36mGET /download-resume/enhanced_resume_5d936907-b2f0-4905-9589-df714d73b1fc.pdf?type=pdf HTTP/1.1[0m" 304 -
+2025-03-24 01:23:34,786 - INFO - 127.0.0.1 - - [24/Mar/2025 01:23:34] "[33mPOST /api/download-tailored HTTP/1.1[0m" 404 -
+2025-03-24 01:34:18,698 - INFO - Enhance resume request received
+2025-03-24 01:34:18,730 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 01:34:19,151 - INFO - File saved to: uploads\3d41a1f6-eaee-491f-99af-133ea5c4772c.pdf
+2025-03-24 01:34:19,155 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 01:34:21,099 - INFO - Resume text extracted successfully
+2025-03-24 01:34:29,575 - INFO - Resume enhanced successfully
+2025-03-24 01:34:29,583 - INFO - PDF generated: enhanced_resumes\enhanced_resume_3d41a1f6-eaee-491f-99af-133ea5c4772c.pdf
+2025-03-24 01:34:30,195 - INFO - 127.0.0.1 - - [24/Mar/2025 01:34:30] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 01:37:36,462 - INFO - 127.0.0.1 - - [24/Mar/2025 01:37:36] "GET /download-resume/enhanced_resume_3d41a1f6-eaee-491f-99af-133ea5c4772c.txt?type=txt HTTP/1.1" 200 -
+2025-03-24 02:30:48,478 - INFO - Downloading font: OpenSans-Regular
+2025-03-24 02:30:48,945 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 02:30:48,947 - INFO - Downloading font: OpenSans-Bold
+2025-03-24 02:30:49,149 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 02:30:49,150 - INFO - Downloading font: Roboto-Regular
+2025-03-24 02:30:49,607 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-24 02:30:49,609 - INFO - Downloading font: Roboto-Bold
+2025-03-24 02:30:50,117 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-24 02:30:50,166 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-24 02:30:50,168 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 02:30:53,891 - INFO - 127.0.0.1 - - [24/Mar/2025 02:30:53] "GET / HTTP/1.1" 200 -
+2025-03-24 02:30:54,148 - INFO - 127.0.0.1 - - [24/Mar/2025 02:30:54] "GET /static/css/styles.css HTTP/1.1" 200 -
+2025-03-24 02:30:54,301 - INFO - 127.0.0.1 - - [24/Mar/2025 02:30:54] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-03-24 02:31:26,740 - INFO - Enhance resume request received
+2025-03-24 02:31:26,748 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 02:31:26,765 - INFO - File saved to: uploads\e2897aba-53b3-46f9-89a3-beb1e4ad1d6b.pdf
+2025-03-24 02:31:26,776 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 02:31:32,528 - INFO - Resume text extracted successfully
+2025-03-24 02:31:38,269 - INFO - Resume enhanced successfully
+2025-03-24 02:31:38,378 - INFO - PDF generated: enhanced_resumes\enhanced_resume_e2897aba-53b3-46f9-89a3-beb1e4ad1d6b.pdf
+2025-03-24 02:31:39,227 - INFO - 127.0.0.1 - - [24/Mar/2025 02:31:39] "POST /api/enhance-resume HTTP/1.1" 200 -
+2025-03-24 02:34:13,771 - INFO - Chat with resume request received
+2025-03-24 02:34:18,726 - INFO - Chat processed successfully
+2025-03-24 02:34:18,727 - INFO - Resume was updated, generating files
+2025-03-24 02:34:18,736 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_5d87f34b-fabd-4458-8b74-1a4c883a4ab3.pdf
+2025-03-24 02:34:18,750 - INFO - PDF URL created: /download/updated_resume_5d87f34b-fabd-4458-8b74-1a4c883a4ab3.pdf/pdf
+2025-03-24 02:34:18,752 - INFO - TXT URL created: /download/updated_resume_5d87f34b-fabd-4458-8b74-1a4c883a4ab3.txt/txt
+2025-03-24 02:34:19,444 - INFO - Match score calculated: 75
+2025-03-24 02:34:19,445 - INFO - Returning updated resume data with download URLs
+2025-03-24 02:34:19,448 - INFO - 127.0.0.1 - - [24/Mar/2025 02:34:19] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:35:02,827 - INFO - 127.0.0.1 - - [24/Mar/2025 02:35:02] "GET /download/updated_resume_5d87f34b-fabd-4458-8b74-1a4c883a4ab3.pdf/pdf HTTP/1.1" 200 -
+2025-03-24 02:39:19,168 - INFO - Chat with resume request received
+2025-03-24 02:39:26,135 - INFO - Chat processed successfully
+2025-03-24 02:39:26,138 - INFO - Resume was updated, generating files
+2025-03-24 02:39:26,168 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_a291f150-ef5f-44f4-9448-8bfaddb33070.pdf
+2025-03-24 02:39:26,170 - INFO - PDF URL created: /download/updated_resume_a291f150-ef5f-44f4-9448-8bfaddb33070.pdf/pdf
+2025-03-24 02:39:26,177 - INFO - TXT URL created: /download/updated_resume_a291f150-ef5f-44f4-9448-8bfaddb33070.txt/txt
+2025-03-24 02:39:26,849 - INFO - Match score calculated: 75
+2025-03-24 02:39:26,861 - INFO - Returning updated resume data with download URLs
+2025-03-24 02:39:26,863 - INFO - 127.0.0.1 - - [24/Mar/2025 02:39:26] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:39:58,492 - INFO - 127.0.0.1 - - [24/Mar/2025 02:39:58] "GET /download/updated_resume_a291f150-ef5f-44f4-9448-8bfaddb33070.pdf/pdf HTTP/1.1" 200 -
+2025-03-24 02:41:23,762 - INFO - Chat with resume request received
+2025-03-24 02:41:28,706 - INFO - Chat processed successfully
+2025-03-24 02:41:28,709 - INFO - Resume was updated, generating files
+2025-03-24 02:41:28,721 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_a9278bf4-cfbd-4dc6-8a77-dd4abdf08184.pdf
+2025-03-24 02:41:28,723 - INFO - PDF URL created: /download/updated_resume_a9278bf4-cfbd-4dc6-8a77-dd4abdf08184.pdf/pdf
+2025-03-24 02:41:28,729 - INFO - TXT URL created: /download/updated_resume_a9278bf4-cfbd-4dc6-8a77-dd4abdf08184.txt/txt
+2025-03-24 02:41:29,318 - INFO - Match score calculated: 75
+2025-03-24 02:41:29,336 - INFO - Returning updated resume data with download URLs
+2025-03-24 02:41:29,338 - INFO - 127.0.0.1 - - [24/Mar/2025 02:41:29] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:41:39,511 - INFO - Chat with resume request received
+2025-03-24 02:41:45,091 - INFO - Chat processed successfully
+2025-03-24 02:41:45,094 - INFO - Resume was updated, generating files
+2025-03-24 02:41:45,121 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_8c7cb441-0d66-4a4e-9a3b-33c3f48419ee.pdf
+2025-03-24 02:41:45,123 - INFO - PDF URL created: /download/updated_resume_8c7cb441-0d66-4a4e-9a3b-33c3f48419ee.pdf/pdf
+2025-03-24 02:41:45,129 - INFO - TXT URL created: /download/updated_resume_8c7cb441-0d66-4a4e-9a3b-33c3f48419ee.txt/txt
+2025-03-24 02:41:45,754 - INFO - Match score calculated: 75
+2025-03-24 02:41:45,756 - INFO - Returning updated resume data with download URLs
+2025-03-24 02:41:45,758 - INFO - 127.0.0.1 - - [24/Mar/2025 02:41:45] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:42:13,900 - INFO - Chat with resume request received
+2025-03-24 02:42:15,098 - INFO - Chat processed successfully
+2025-03-24 02:42:15,100 - INFO - 127.0.0.1 - - [24/Mar/2025 02:42:15] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:42:22,644 - INFO - 127.0.0.1 - - [24/Mar/2025 02:42:22] "GET /download/updated_resume_8c7cb441-0d66-4a4e-9a3b-33c3f48419ee.pdf/pdf HTTP/1.1" 200 -
+2025-03-24 02:44:02,100 - INFO - Chat with resume request received
+2025-03-24 02:44:06,674 - INFO - Chat processed successfully
+2025-03-24 02:44:06,877 - INFO - Resume was updated, generating files
+2025-03-24 02:44:06,887 - INFO - Updated PDF generated: enhanced_resumes\updated_resume_5de7a175-f83b-4928-804e-5ff49c9cf776.pdf
+2025-03-24 02:44:06,888 - INFO - PDF URL created: /download/updated_resume_5de7a175-f83b-4928-804e-5ff49c9cf776.pdf/pdf
+2025-03-24 02:44:06,894 - INFO - TXT URL created: /download/updated_resume_5de7a175-f83b-4928-804e-5ff49c9cf776.txt/txt
+2025-03-24 02:44:07,976 - INFO - Match score calculated: 75
+2025-03-24 02:44:07,978 - INFO - Returning updated resume data with download URLs
+2025-03-24 02:44:07,981 - INFO - 127.0.0.1 - - [24/Mar/2025 02:44:07] "POST /api/chat-with-resume HTTP/1.1" 200 -
+2025-03-24 02:46:23,038 - INFO - 127.0.0.1 - - [24/Mar/2025 02:46:23] "GET /download/updated_resume_5de7a175-f83b-4928-804e-5ff49c9cf776.pdf/pdf HTTP/1.1" 200 -
+2025-03-24 03:11:32,151 - INFO - Downloading font: OpenSans-Regular
+2025-03-24 03:11:32,728 - ERROR - Error downloading font OpenSans-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 03:11:32,729 - INFO - Downloading font: OpenSans-Bold
+2025-03-24 03:11:32,875 - ERROR - Error downloading font OpenSans-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/opensans/OpenSans%5Bwdth%2Cwght%5D.ttf
+2025-03-24 03:11:32,876 - INFO - Downloading font: Roboto-Regular
+2025-03-24 03:11:33,313 - ERROR - Error downloading font Roboto-Regular: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Regular.ttf
+2025-03-24 03:11:33,316 - INFO - Downloading font: Roboto-Bold
+2025-03-24 03:11:33,737 - ERROR - Error downloading font Roboto-Bold: 404 Client Error: Not Found for url: https://github.com/google/fonts/raw/main/apache/roboto/Roboto-Bold.ttf
+2025-03-24 03:11:33,791 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-03-24 03:11:33,793 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-24 03:11:44,750 - INFO - 127.0.0.1 - - [24/Mar/2025 03:11:44] "GET / HTTP/1.1" 200 -
+2025-03-24 03:11:44,772 - INFO - 127.0.0.1 - - [24/Mar/2025 03:11:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-03-24 03:11:44,773 - INFO - 127.0.0.1 - - [24/Mar/2025 03:11:44] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-03-24 03:12:22,142 - INFO - Enhance resume request received
+2025-03-24 03:12:22,151 - INFO - Resume file: k deepak resume-6.pdf
+2025-03-24 03:12:22,157 - INFO - File saved to: uploads\c11be057-c62f-4734-9c3f-e8c6777ab680.pdf
+2025-03-24 03:12:22,176 - WARNING - PyPDF2 extraction failed: No module named 'PyPDF2', trying pdfminer...
+2025-03-24 03:12:24,008 - INFO - Resume text extracted successfully
+2025-03-24 03:12:30,309 - INFO - Resume enhanced successfully
+2025-03-24 03:12:30,324 - ERROR - Error generating PDF: 'latin-1' codec can't encode character '\u2013' in position 269: ordinal not in range(256)
+2025-03-24 03:12:30,326 - ERROR - Error generating PDF: 'latin-1' codec can't encode character '\u2013' in position 269: ordinal not in range(256)
+2025-03-24 03:12:30,331 - INFO - 127.0.0.1 - - [24/Mar/2025 03:12:30] "[35m[1mPOST /api/enhance-resume HTTP/1.1[0m" 500 -
+2025-03-24 03:13:46,218 - INFO - 127.0.0.1 - - [24/Mar/2025 03:13:46] "[36mGET /download/updated_resume_5de7a175-f83b-4928-804e-5ff49c9cf776.pdf/pdf HTTP/1.1[0m" 304 -
+2025-03-24 03:14:02,460 - INFO - 127.0.0.1 - - [24/Mar/2025 03:14:02] "[33mPOST /api/chat-with-resume HTTP/1.1[0m" 404 -

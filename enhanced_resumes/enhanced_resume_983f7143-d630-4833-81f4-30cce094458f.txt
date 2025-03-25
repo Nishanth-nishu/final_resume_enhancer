@@ -1,0 +1,48 @@
+**R NISHANTH**
++91 6302092732 • Hyderabad, India • nishanth0962333@gmail.com
+linkedin.com/in/r-nishanth-/ • github.com/Nishanth-nishu • nishanth-nishu.github.io
+
+**SUMMARY**
+Highly motivated and results-oriented Software Development Engineer with 3+ years of experience in designing, developing, and deploying AI-driven applications and scalable web systems. Proven ability to leverage machine learning models to solve complex problems, optimize system performance, and deliver measurable business value. Expertise in front-end technologies, including ReactJS, and proficiency in back-end development using Python and Flask.  Passionate about data-driven decision-making and continuous improvement.
+
+**EDUCATION**
+**Bachelor of Technology (B.Tech), Computer Science and Engineering**
+KG Reddy College of Engineering and Technology, Hyderabad | 2021 – 2025 | CGPA: 3.04/4
+* Relevant Activities: Member of AI&ML Club, Member of KASE Innovation Cell
+
+**TECHNICAL SKILLS**
+**Programming Languages:** Python (Flask, Django), C, C++, JavaScript (ES6), HTML, CSS
+**Frameworks/Libraries:** ReactJS, React Native, Keras, TensorFlow, PyTorch, Scikit-learn,  Node.js,  jQuery
+**Databases:** MySQL, SQLite3
+**Web Technologies:** REST APIs,  Web Scraping,  MLOps,  Agile methodologies
+**Data Visualization:** Matplotlib, Seaborn, Power BI
+**Tools:** Git, GitHub, Docker, Hugging Face,  Figma (familiar)
+**Operating Systems:** Windows, Linux
+
+**PROFESSIONAL EXPERIENCE**
+**Oracle APEX Application Trainee** | ProwessIQ Information Systems Pvt Ltd | Chennai, India | Feb 2025
+* Engineered an image-based recommendation system using EfficientNet and FAISS, improving search accuracy by 40% and enhancing database performance by 30% through seamless integration with Oracle APEX.
+* Optimized enterprise AI solutions, reducing image fetching processing latency from 5 seconds to 2 seconds.
+
+**PROJECTS**
+**Japanese to English Translator (Flask, MBART)** | github.com/Nishanth-nishu/japtoeng
+* Developed a Flask-based NLP application achieving a 92 BLEU score for accurate Japanese-English translations.
+* Optimized inference speed by 35% using quantization and multi-threading.
+
+**AI-Driven Glycemic Risk Prediction System (Python, Scikit-learn)** | github.com/Nishanth-nishu/diabetic-prevention-
+* Built a machine learning model with 88% accuracy to predict diabetes risk from patient health records.
+* Implemented a personalized lifestyle recommendation system (Gemini AI concept adapted), increasing patient engagement by 50%.
+
+**License Plate Detection and Recognition (Python, OpenCV, OCR)** | github.com/Nishanth-nishu/licence-plate-detection | huggingface.co/spaces/Nishur/licensed
+* Developed an OCR-based license plate detection model with 95% accuracy.
+* Deployed as a real-time web application, reducing manual verification time by 80%.
+
+**ACHIEVEMENTS**
+* Runner-Up, State-Level Technical Fest: Competed in a highly competitive state-level technical fest, securing Runner-Up in a tech innovation challenge.
+* Participant, IEEE National-Level Project Expo: Showcased an AI-powered automation project, receiving recognition from IEEE experts.
+* Completed 30+ hours of intensive Python Data Science training and developed a predictive analytics model that improved event classification accuracy by 15%.
+* Full-Stack Python Internship (Swecha Telangana): Built and deployed a Django-based web application for data visualization, optimizing database queries to reduce API response time by 50%.
+
+**LEADERSHIP AND EXTRA-CURRICULAR ACTIVITIES**
+* Admin of Telegram Community (70+ members): Curated AI research papers, improving member engagement by 60%.
+* Head of AIML Club (Treasurer): Organized 5+ workshops with 100+ attendees, increasing club participation by 40%.

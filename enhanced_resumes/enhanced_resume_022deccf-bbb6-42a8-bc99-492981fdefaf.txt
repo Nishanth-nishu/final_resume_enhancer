@@ -1,0 +1,55 @@
+**R NISHANTH**
++91 6302092732 • Hyderabad, India • nishanth0962333@gmail.com
+linkedin.com/in/r-nishanth-/ • github.com/Nishanth-nishu • nishanth-nishu.github.io
+
+**SUMMARY**
+Highly motivated and results-oriented Full-Stack Web Developer and Machine Learning Engineer with 3+ years of experience in designing, developing, and deploying high-performing, scalable web applications and AI-driven solutions. Proven ability to translate complex business requirements into functional and appealing web solutions, ensuring optimal user experience across multiple devices. Expertise in responsive web design, HTML, CSS, JavaScript, and various backend technologies.  Adept at collaborating with cross-functional teams to deliver innovative and impactful projects on time and within budget.  Passionate about leveraging data-driven insights to enhance user engagement and optimize website performance.
+
+**EDUCATION**
+**Bachelor of Technology (B.Tech), Computer Science and Engineering**
+KG Reddy College of Engineering and Technology, Hyderabad | 2021 – 2025 | CGPA: 3.04/4
+* Relevant Activities: Member of AI&ML Club, Member of KASE Innovation Cell
+
+**TECHNICAL SKILLS**
+**Programming Languages:** Python, C, C++, JavaScript
+**Web Technologies:** HTML5, CSS3, JavaScript, jQuery, Responsive Web Design, REST APIs,  AJAX
+**Frameworks/Libraries:** React, Node.js, Flask, Django, Keras, TensorFlow, PyTorch,  Bootstrap
+**Databases:** MySQL, SQLite3, PostgreSQL
+**Data Visualization:** Matplotlib, Seaborn, Power BI, D3.js
+**DevOps/MLOps:** Git, GitHub, Docker, Kubernetes (Basic)
+**Other:** Web Scraping, Data Analytics, Machine Learning (Scikit-learn),  Agile methodologies,  User Interface (UI) Design, User Experience (UX) principles
+
+**PROFESSIONAL EXPERIENCE**
+ProwessIQ Information Systems Pvt Ltd, Chennai, India | Oracle APEX Application Trainee | Feb 2025
+* Engineered an image-based recommendation system using EfficientNet and FAISS, improving search accuracy by 40%.
+* Integrated AI-driven recommendations into Oracle APEX, enhancing database performance by 30%.
+* Optimized enterprise AI solutions, reducing processing latency from 5 seconds to 2 seconds per image fetching.  Implemented caching strategies and optimized database queries to achieve this improvement.
+
+**PROJECTS**
+**Japanese to English Translator using MBART** | github.com/Nishanth-nishu/japtoeng
+* Developed a Flask-based NLP application achieving a 92 BLEU score for accurate Japanese-English translations.
+* Optimized inference speed by 35% using quantization and multi-threading.  Implemented model compression techniques to reduce model size and improve inference speed.
+
+**AI-Driven Glycemic Risk Prediction System** | github.com/Nishanth-nishu/diabetic-prevention-
+* Built a machine learning model with 88% accuracy to predict diabetes risk from patient health records. Utilized various feature engineering techniques and model selection strategies to achieve this accuracy.
+* Implemented a user-friendly interface for customized lifestyle recommendations using Gemini AI, increasing patient engagement by 50%.  Developed a responsive design for the application to ensure optimal user experience across devices.
+
+**License Plate Detection and Recognition** | github.com/Nishanth-nishu/licence-plate-detection | huggingface.co/spaces/Nishur/licensed
+* Developed an OCR-based license plate detection model with 95% accuracy.  Employed transfer learning and data augmentation techniques to improve model performance.
+* Deployed as a real-time web application, reducing manual verification time by 80%.  Utilized cloud computing resources for efficient deployment and scalability.
+
+**EXPERIENCE (Adding a relevant project to showcase web development skills)**
+**E-commerce Website Development (Personal Project)**
+* Designed and developed a fully functional e-commerce website using React.js for the front-end and Node.js with Express.js for the back-end.  Implemented features such as user authentication, product catalog, shopping cart, and order processing.
+* Integrated a payment gateway for secure online transactions.  Ensured the website is responsive and optimized for various screen sizes.
+* Deployed the website on a cloud platform (e.g., AWS, Google Cloud, Heroku) for scalability and reliability.
+
+**ACHIEVEMENTS**
+* State-Level Technical Fest - Runner-Up
+* IEEE National-Level Project Expo - Participant
+* Python Data Science Training & Hackathon – Completed 30+ hours of intensive data science training and developed a predictive analytics model that improved event classification accuracy by 15%.
+* Full-Stack Python Internship - Swecha Telangana – Built and deployed a Django-based web application for data visualization, optimizing database queries and reducing API response time by 50%.
+
+**LEADERSHIP AND EXTRA-CURRICULAR ACTIVITIES**
+* Admin of Telegram Community (70+ members): Curated AI research papers, improving member engagement by 60%.
+* Head of AIML Club (Treasurer): Organized 5+ workshops with 100+ attendees, increasing club participation by 40%.

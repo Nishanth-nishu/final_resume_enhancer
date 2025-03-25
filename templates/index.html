@@ -110,12 +110,38 @@
                             </div>
                         </div>
                         <div class="card-body">
+                            <!-- Chat with Resume Button -->
                             <div class="mb-3 d-flex justify-content-end">
+                                <button class="btn btn-primary btn-sm me-2" id="chatWithResumeBtn">
+                                    <i class="bi bi-chat-text"></i> Chat with Resume
+                                </button>
                                 <button class="btn btn-success btn-sm" id="tailorMoreBtn">
                                     <i class="bi bi-bullseye"></i> Further Tailor for This Job
                                 </button>
                             </div>
                             
+                            <!-- Chat Card -->
+                            <div class="card shadow mb-4" id="chatCard" style="display: none;">
+                                <div class="card-header bg-primary text-white">
+                                    <h4><i class="bi bi-chat-dots"></i> Talk to Your Resume</h4>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chat-container mb-3" id="chatContainer">
+                                        <div class="system-message">
+                                            Hello! I'm your resume assistant. You can ask me to add or modify content in your tailored resume. 
+                                            For example, you can say "Add a project about machine learning" or "Improve my skills section".
+                                        </div>
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="chatInput" placeholder="Type your message here...">
+                                        <button class="btn btn-primary" id="sendMessageBtn">
+                                            <i class="bi bi-send"></i> Send
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Resume Content Tabs -->
                             <div class="resume-content">
                                 <div class="mb-4">
                                     <ul class="nav nav-tabs" id="resultTabs" role="tablist">

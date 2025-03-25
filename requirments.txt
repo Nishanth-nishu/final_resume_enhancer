@@ -1,9 +1,0 @@
-flask
-google-generativeai
-python-dotenv
-werkzeug
-pdfminer.six
-python-docx
-fpdf
-gunicorn
-uuid

@@ -15,6 +15,10 @@ import io
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 import base64
+import time
+import asyncio
+import hashlib
+from typing import Dict, List, Tuple, Optional, Any, Union
 
 # For PDF generation with better Unicode support
 from fpdf import FPDF
@@ -195,25 +199,42 @@ def enhance_resume():
     except Exception as e:
         logging.error(f"Unexpected error: {e}")
         return jsonify({"error": str(e)}), 500
-
-@app.route("/download-resume/<filename>")
-def download_resume(filename):
-    """Serve the generated resume file for download."""
+    
+@app.route("/download/<filename>/<type>")
+def download_resume(filename, type):
+    """Route to download generated resume files."""
     try:
-        file_type = request.args.get('type', 'pdf')
+        if type not in ['pdf', 'txt']:
+            return "Invalid file type", 400
+            
+        # Verify the filename is safe
+        safe_filename = secure_filename(filename)
+        if safe_filename != filename:
+            return "Invalid filename", 400
+            
         file_path = os.path.join(OUTPUT_FOLDER, filename)
         
+        # Check if file exists
         if not os.path.exists(file_path):
             logging.error(f"File not found: {file_path}")
-            return jsonify({"error": "File not found"}), 404
+            return "File not found", 404
             
-        if file_type == 'pdf':
-            return send_file(file_path, as_attachment=True, download_name="enhanced_resume.pdf")
-        else:
-            return send_file(file_path, as_attachment=True, download_name="enhanced_resume.txt")
+        # Set the appropriate MIME type
+        mime_type = "application/pdf" if type == 'pdf' else "text/plain"
+        
+        # Set a more user-friendly download filename
+        download_name = f"Resume.{type}"
+        
+        return send_file(
+            file_path,
+            mimetype=mime_type,
+            as_attachment=True,
+            download_name=download_name
+        )
+        
     except Exception as e:
-        logging.error(f"Error serving file: {e}")
-        return jsonify({"error": str(e)}), 500
+        logging.error(f"Error downloading file: {e}")
+        return "Error downloading file", 500
 
 def extract_resume_text(file_path: str) -> str:
     """Extract text from a resume file (PDF, DOCX, TXT, or RTF)."""
@@ -444,6 +465,12 @@ def enhance_resume_with_gemini(resume_text: str, job_description: str, template_
             enhanced_resume = re.sub(r'```[a-z]*\n', '', enhanced_resume)
             enhanced_resume = enhanced_resume.replace('```', '')
             
+            # Remove all markdown formatting
+            enhanced_resume = re.sub(r'\*\*', '', enhanced_resume)  # Remove bold formatting
+            enhanced_resume = re.sub(r'\*', '', enhanced_resume)    # Remove italic formatting
+            enhanced_resume = re.sub(r'__', '', enhanced_resume)    # Remove underscore bold
+            enhanced_resume = re.sub(r'_', '', enhanced_resume)     # Remove underscore italic
+            
             return enhanced_resume, skills_list, keywords_used
             
         except json.JSONDecodeError:
@@ -452,6 +479,13 @@ def enhance_resume_with_gemini(resume_text: str, job_description: str, template_
             cleaned_text = response.text.strip()
             cleaned_text = re.sub(r'```[a-z]*\n', '', cleaned_text)
             cleaned_text = cleaned_text.replace('```', '')
+            
+            # Remove all markdown formatting
+            cleaned_text = re.sub(r'\*\*', '', cleaned_text)  # Remove bold formatting
+            cleaned_text = re.sub(r'\*', '', cleaned_text)    # Remove italic formatting
+            cleaned_text = re.sub(r'__', '', cleaned_text)    # Remove underscore bold
+            cleaned_text = re.sub(r'_', '', cleaned_text)     # Remove underscore italic
+            
             return cleaned_text, [], []
             
     except Exception as e:
@@ -462,8 +496,25 @@ def generate_pdf(text: str, output_path: str, template_type: str = "engineering"
                 skills_list: list = None, output_format: str = "standard") -> None:
     """Generate a professionally formatted PDF with the enhanced resume."""
     try:
+        # Final cleanup of any markdown formatting before generating PDF
+        def clean_markdown(text):
+            # Remove any remaining markdown formatting
+            text = re.sub(r'\*\*', '', text)  # Remove bold formatting
+            text = re.sub(r'\*', '', text)    # Remove italic formatting
+            text = re.sub(r'__', '', text)    # Remove underscore bold
+            text = re.sub(r'_', '', text)     # Remove underscore italic
+            text = re.sub(r'##+\s', '', text) # Remove heading markers
+            text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)  # Replace [text](url) with just text
+            return text
+            
+        # Clean the text before proceeding
+        text = clean_markdown(text)
+        
         # Create a function to clean text for PDF
         def clean_text_for_pdf(text):
+            # First clean any markdown that might be in the line
+            text = clean_markdown(text)
+            
             # Replace common Unicode characters with ASCII equivalents
             replacements = {
                 '\u2013': '-',  # en-dash
@@ -588,6 +639,20 @@ def generate_pdf(text: str, output_path: str, template_type: str = "engineering"
 def generate_modern_pdf(text: str, output_path: str, template_type: str, skills_list: list = None) -> None:
     """Generate a modern-looking PDF with better styling and layout."""
     try:
+        # Clean any markdown formatting first
+        def clean_markdown(text):
+            # Remove any remaining markdown formatting
+            text = re.sub(r'\*\*', '', text)  # Remove bold formatting
+            text = re.sub(r'\*', '', text)    # Remove italic formatting
+            text = re.sub(r'__', '', text)    # Remove underscore bold
+            text = re.sub(r'_', '', text)     # Remove underscore italic
+            text = re.sub(r'##+\s', '', text) # Remove heading markers
+            text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)  # Replace [text](url) with just text
+            return text
+            
+        # Clean the text before proceeding
+        text = clean_markdown(text)
+        
         class ModernPDF(FPDF):
             def header(self):
                 # Header with styling based on template type
@@ -900,123 +965,177 @@ def image_to_base64(image):
     buffered = io.BytesIO()
     image.save(buffered, format="PNG")
     return base64.b64encode(buffered.getvalue()).decode()
-@app.route("/api/download-tailored", methods=["POST"])
-def download_tailored_resume():
-    """API endpoint to generate and download a tailored resume."""
+
+@app.route("/api/chat-with-resume", methods=["POST"])
+def chat_with_resume():
+    """API endpoint to chat with and modify a resume using Gemini."""
     try:
-        logging.info("Download tailored resume request received")
+        logging.info("Chat with resume request received")
         
-        # Get the enhanced resume text and job description from the request
+        # Get data from the request
         data = request.json
         if not data:
             return jsonify({"error": "No data provided"}), 400
             
-        enhanced_resume = data.get("enhancedResume", "")
+        user_message = data.get("message", "")
+        resume_text = data.get("resumeText", "")
         job_description = data.get("jobDescription", "")
         template_type = data.get("template", "engineering")
         output_format = data.get("outputFormat", "standard")
         
-        if not enhanced_resume:
-            return jsonify({"error": "Enhanced resume text is required"}), 400
+        if not user_message:
+            return jsonify({"error": "Message is required"}), 400
             
-        if not job_description:
-            return jsonify({"error": "Job description is required"}), 400
+        if not resume_text:
+            return jsonify({"error": "Resume text is required"}), 400
         
-        # Create a unique ID for this download
-        unique_id = str(uuid.uuid4())
+        # Create a unique ID for this conversation
+        conversation_id = str(uuid.uuid4())
         
-        # Further tailor the resume specifically for this job
+        # Process the chat and get a response with optional resume updates
         try:
-            tailored_resume, skills_list, keywords_used = tailor_resume_for_job(
-                enhanced_resume, job_description, template_type
+            response, updated_resume, skills_list, keywords_used = process_chat_with_resume(
+                user_message, resume_text, job_description, template_type
             )
-            logging.info("Resume tailored successfully")
+            logging.info("Chat processed successfully")
         except Exception as e:
-            logging.error(f"Error tailoring resume: {e}")
-            return jsonify({"error": f"Failed to tailor resume: {str(e)}"}), 500
+            logging.error(f"Error processing chat: {e}")
+            return jsonify({"error": f"Failed to process chat: {str(e)}"}), 500
         
-        # Generate PDF of the tailored resume
-        pdf_filename = f"tailored_resume_{unique_id}.pdf"
-        pdf_path = os.path.join(OUTPUT_FOLDER, pdf_filename)
+        # If resume was updated, generate new PDF
+        pdf_url = None
+        txt_url = None
+        match_score = None
         
-        try:
-            generate_pdf(tailored_resume, pdf_path, template_type, skills_list, output_format)
-            logging.info(f"Tailored PDF generated: {pdf_path}")
-        except Exception as e:
-            logging.error(f"Error generating tailored PDF: {e}")
-            return jsonify({"error": f"PDF generation failed: {str(e)}"}), 500
+        if updated_resume and updated_resume != resume_text:
+            logging.info("Resume was updated, generating files")
+            
+            # Generate PDF of the updated resume
+            pdf_filename = f"updated_resume_{conversation_id}.pdf"
+            pdf_path = os.path.join(OUTPUT_FOLDER, pdf_filename)
+            
+            try:
+                # Make sure the OUTPUT_FOLDER exists
+                os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+                
+                # Generate PDF
+                generate_pdf(updated_resume, pdf_path, template_type, skills_list, output_format)
+                logging.info(f"Updated PDF generated: {pdf_path}")
+                
+                # Verify that the file was created
+                if os.path.exists(pdf_path):
+                    pdf_url = url_for('download_resume', filename=pdf_filename, type='pdf')
+                    logging.info(f"PDF URL created: {pdf_url}")
+                else:
+                    logging.error(f"PDF file was not created at {pdf_path}")
+            except Exception as e:
+                logging.error(f"Error generating updated PDF: {str(e)}")
+                # Continue without PDF - we'll still return the text version
+            
+            # Generate a text version for download
+            txt_filename = f"updated_resume_{conversation_id}.txt"
+            txt_path = os.path.join(OUTPUT_FOLDER, txt_filename)
+            
+            try:
+                with open(txt_path, 'w', encoding='utf-8') as f:
+                    f.write(updated_resume)
+                
+                if os.path.exists(txt_path):
+                    txt_url = url_for('download_resume', filename=txt_filename, type='txt')
+                    logging.info(f"TXT URL created: {txt_url}")
+                else:
+                    logging.error(f"TXT file was not created at {txt_path}")
+            except Exception as e:
+                logging.error(f"Error generating text file: {str(e)}")
+            
+            # Generate a match score between the updated resume and job description
+            try:
+                match_score = calculate_match_score(updated_resume, job_description)
+                logging.info(f"Match score calculated: {match_score}")
+            except Exception as e:
+                logging.error(f"Error calculating match score: {str(e)}")
+                match_score = None
         
-        # Generate a text version for download
-        txt_filename = f"tailored_resume_{unique_id}.txt"
-        txt_path = os.path.join(OUTPUT_FOLDER, txt_filename)
-        with open(txt_path, 'w', encoding='utf-8') as f:
-            f.write(tailored_resume)
+        # Prepare the response
+        response_data = {
+            "response": response
+        }
         
-        # Generate a match score between the tailored resume and job description
-        match_score = calculate_match_score(tailored_resume, job_description)
+        if updated_resume and updated_resume != resume_text:
+            response_data.update({
+                "updatedResume": updated_resume,
+                "pdfUrl": pdf_url,
+                "txtUrl": txt_url,
+                "matchScore": match_score,
+                "skills": skills_list,
+                "keywordsUsed": keywords_used
+            })
+            logging.info(f"Returning updated resume data with download URLs")
         
-        return jsonify({
-            "tailoredResume": tailored_resume,
-            "pdfUrl": url_for('download_resume', filename=pdf_filename, type='pdf'),
-            "txtUrl": url_for('download_resume', filename=txt_filename, type='txt'),
-            "matchScore": match_score,
-            "keywordsUsed": keywords_used,
-            "skills": skills_list
-        })
+        return jsonify(response_data)
         
     except Exception as e:
-        logging.error(f"Unexpected error in download_tailored_resume: {e}")
+        logging.error(f"Unexpected error in chat_with_resume: {e}")
         return jsonify({"error": str(e)}), 500
 
-def tailor_resume_for_job(resume_text: str, job_description: str, template_type: str) -> tuple:
-    """Further tailor an already enhanced resume specifically for a job."""
+
+def process_chat_with_resume(user_message: str, resume_text: str, job_description: str, template_type: str) -> tuple:
+    """
+    Process a chat message about a resume and return a response with optional resume updates.
+    Ensures proper formatting is maintained.
+    """
     try:
-        # Select prompt template based on template_type
+        # Create a prompt for Gemini to handle the chat
         prompt_template = """
-        You are an expert resume editor specializing in job-specific tailoring.
+        You are an AI resume assistant helping a user modify their resume through a chat interface.
         
-        I already have an enhanced resume, but I need you to further tailor it specifically for this job description.
-        
-        Focus on:
-        1. Reordering skills and experiences to highlight those most relevant to this specific job
-        2. Adjusting wording to better match the terminology used in the job description
-        3. Emphasizing achievements that directly relate to the key requirements
-        4. Ensuring all critical keywords from the job description are incorporated naturally
-        5. Adapting the professional summary to address the specific role
-        6. Making sure the resume passes ATS screening for this exact position
-        
-        Enhanced Resume to tailor:
+        # User's current resume:
         ```
         {resume_text}
         ```
         
-        Job Description:
+        # Job description they're applying for:
         ```
         {job_description}
         ```
         
+        # User's message to you:
+        ```
+        {user_message}
+        ```
+        
+        ## Instructions:
+        1. If the user is asking for modifications to their resume, make the requested changes while STRICTLY preserving the overall format and structure.
+        2. Maintain all section headers, indentation, and spacing exactly as in the original resume.
+        3. Keep the same line break pattern as the original resume.
+        4. If you're adding new content, follow the exact same formatting style as similar content in the resume.
+        5. Do not reformat or rearrange sections unless specifically requested by the user.
+        6. Your role is to be conversational but focused on helping improve the resume for the specific job.
+        7. If you make changes to the resume, explain what changes you made and why they improve the resume.
+        
         Your output must be in this JSON format:
         {{
-            "tailored_resume": "The complete tailored resume as plain text with professional formatting",
-            "skills_list": ["Skill 1", "Skill 2", "Skill 3"...],  // List of 5-10 most important skills for this specific job
-            "keywords_used": ["Keyword 1", "Keyword 2", "Keyword 3"...]  // List of keywords from job description used in the resume
+            "response": "Your conversational response to the user explaining what you did or giving advice",
+            "resume_updated": true/false,
+            "updated_resume": "The full updated resume text if changes were made, otherwise null",
+            "skills_list": ["Skill 1", "Skill 2", "Skill 3"...],  // List of 5-10 most important skills (only if resume was updated)
+            "keywords_used": ["Keyword 1", "Keyword 2", "Keyword 3"...]  // List of keywords from job description used in the resume (only if resume was updated)
         }}
-        
-        Ensure the tailored resume maintains professional formatting in plain text.
         """
         
-        # Format the prompt with the actual resume and job description
+        # Format the prompt with the actual data
         formatted_prompt = prompt_template.format(
+            user_message=user_message,
             resume_text=resume_text,
             job_description=job_description
         )
         
-        # Use Gemini Pro to generate the tailored resume
+        # Use Gemini Pro to process the chat
         response = model.generate_content(
             contents=formatted_prompt,
             generation_config=genai.types.GenerationConfig(
-                temperature=0.2,  # Lower temperature for more consistent results
-                max_output_tokens=4000,  # Higher token limit for longer resumes
+                temperature=0.2,  # Lower temperature for more precise formatting
+                max_output_tokens=4000,  # Higher token limit for longer responses
                 response_mime_type="application/json"  # Request JSON response
             )
         )
@@ -1024,35 +1143,41 @@ def tailor_resume_for_job(resume_text: str, job_description: str, template_type:
         # Check if we have a valid response
         if not response.text:
             logging.error("Empty or invalid response from Gemini API")
-            return "Error: Could not generate tailored resume. Please try again.", [], []
+            return "Sorry, I couldn't process your request. Please try again.", None, [], []
         
         # Parse the JSON response
         try:
             result = json.loads(response.text)
-            tailored_resume = result.get("tailored_resume", "")
-            skills_list = result.get("skills_list", [])
-            keywords_used = result.get("keywords_used", [])
+            ai_response = result.get("response", "")
+            resume_updated = result.get("resume_updated", False)
+            updated_resume = result.get("updated_resume", None) if resume_updated else None
+            skills_list = result.get("skills_list", []) if resume_updated else []
+            keywords_used = result.get("keywords_used", []) if resume_updated else []
             
-            # Clean the tailored resume text
-            tailored_resume = tailored_resume.strip()
+            # Clean up the updated resume text if it exists
+            if updated_resume:
+                updated_resume = updated_resume.strip()
+                
+                # Remove any markdown code blocks if present
+                updated_resume = re.sub(r'```[a-z]*\n', '', updated_resume)
+                updated_resume = updated_resume.replace('```', '')
+                
+                # Remove any markdown formatting
+                updated_resume = re.sub(r'\*\*', '', updated_resume)  # Remove bold
+                updated_resume = re.sub(r'\_\_', '', updated_resume)  # Remove underline
+                updated_resume = re.sub(r'\*', '', updated_resume)    # Remove italics
+                updated_resume = re.sub(r'\_', '', updated_resume)    # Remove italics
             
-            # Remove any markdown code blocks if present
-            tailored_resume = re.sub(r'```[a-z]*\n', '', tailored_resume)
-            tailored_resume = tailored_resume.replace('```', '')
-            
-            return tailored_resume, skills_list, keywords_used
+            return ai_response, updated_resume, skills_list, keywords_used
             
         except json.JSONDecodeError:
             logging.error("Failed to parse JSON response from Gemini API")
-            # Fallback to basic text extraction
-            cleaned_text = response.text.strip()
-            cleaned_text = re.sub(r'```[a-z]*\n', '', cleaned_text)
-            cleaned_text = cleaned_text.replace('```', '')
-            return cleaned_text, [], []
+            # Try to extract a basic text response
+            return "I processed your request, but couldn't format the response properly. Please try again with a clearer request.", None, [], []
             
     except Exception as e:
-        logging.error(f"Error in Gemini API call for tailoring: {e}")
-        raise ValueError(f"Failed to tailor resume: {str(e)}")
+        logging.error(f"Error in Gemini API call for chat: {e}")
+        raise ValueError(f"Failed to process chat: {str(e)}")
     
 if __name__ == "__main__":
     # Run the Flask app
