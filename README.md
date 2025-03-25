@@ -11,12 +11,12 @@ A web application that enhances resumes using Google's Gemini AI by tailoring th
 
 ## Features
 
-- **AI-Powered Resume Enhancement**: Uses Gemini 1.5 Flash to optimize resumes for specific job descriptions
-- **Multiple Templates**: Choose from engineering, FAANG, or non-technical professional templates
-- **PDF Generation**: Creates professionally formatted PDF resumes with proper styling
-- **Match Scoring**: Calculates how well your resume matches the job description
-- **Interactive Chat**: Modify your resume through conversational AI
-- **File Support**: Processes PDF, DOCX, TXT, and RTF formats
+- AI-Powered Resume Enhancement: Uses Gemini 1.5 Flash to optimize resumes for specific job descriptions
+- Multiple Templates: Choose from engineering, FAANG, or non-technical professional templates
+- PDF Generation: Creates professionally formatted PDF resumes with proper styling
+- Match Scoring: Calculates how well your resume matches the job description
+- Interactive Chat: Modify your resume through conversational AI
+- File Support: Processes PDF, DOCX, TXT, and RTF formats
 
 ## Project Structure
 
