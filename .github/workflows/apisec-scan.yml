@@ -21,14 +21,12 @@ jobs:
       - name: APIsec scan
         uses: apisec-inc/apisec-run-scan@025432089674a28ba8fb55f8ab06c10215e772ea
         with:
-          # Correct parameter names:
-          username: ${{ secrets.APISEC_USERNAME }}
-          password: ${{ secrets.APISEC_PASSWORD }}
-          # Project details:
-          project: "VAmPI"
-          profile: "Master"
-          # Output file:
-          outputfile: "apisec-results.sarif"
+          # Correct parameter names as per the action's specification
+          apisec-username: ${{ secrets.APISEC_USERNAME }}
+          apisec-password: ${{ secrets.APISEC_PASSWORD }}
+          apisec-project: "VAmPI"
+          apisec-profile: "Master"
+          sarif-result-file: "apisec-results.sarif"
           
       - name: Upload SARIF results
         uses: github/codeql-action/upload-sarif@v3
